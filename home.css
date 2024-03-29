@@ -6,6 +6,8 @@ body{
     background-color: #111;
 }
 .row__post{
+    min-width: 200px;
+    max-height: 100px;
     width: 100%;
     object-fit: contain;
     max-height: 100px;
@@ -15,7 +17,7 @@ body{
 .row__posts{
     display: flex;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
 
 }
 .row__post:hover{
