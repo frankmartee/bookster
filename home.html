@@ -293,6 +293,52 @@
         </div>
     </div>
     <script>
+document.addEventListener('mousemove', (event) => {
+  const carousels = document.querySelectorAll('.row_container');
+  carousels.forEach((carousel, index) => {
+    const rect = carousel.getBoundingClientRect();
+    const hoverZone = rect.width / 4;
+    const isMouseInHoverZone = event.clientX > rect.left && event.clientX < rect.right && event.clientY > rect.top && event.clientY < rect.bottom;
+
+    if (isMouseInHoverZone) {
+      carouselHover(carousel, index);
+    }
+
+    // Scroll position saving
+    carousel.addEventListener('scroll', () => {
+      carousel.dataset.scrollPosition = carousel.scrollLeft;
+    });
+
+    // Scroll position restoration
+    const savedScrollPosition = carousel.dataset.scrollPosition;
+    if (savedScrollPosition) {
+      carousel.scrollLeft = savedScrollPosition;
+    }
+  });
+});
+
+function carouselHover(carousel, index) {
+  const rect = carousel.getBoundingClientRect();
+  const carouselWidth = rect.width;
+  const hoverZone = carouselWidth / 4;
+
+  // Update the carousel's CSS transform property
+  function updateTransform(event) {
+    const deltaX = (event.clientX / hoverZone) * (carousel.scrollWidth - carousel.offsetWidth);
+    carousel.style.transform = `translateX(${deltaX}px)`;
+    carousel.scrollLeft = deltaX;
+  }
+
+  // Add an event listener to the carousel for the mouse movement
+  carousel.addEventListener('mousemove', updateTransform);
+
+  // Remove the event listener from the carousel when the mouse leaves
+  carousel.addEventListener('mouseout', () => {
+    carousel.style.transform = 'translateX(0)';
+    carousel.removeEventListener('mousemove', updateTransform);
+  });
+}
+        
         const myListButton = document.querySelector('.banner_buttons button:nth-child(2)'); // Select second button within .banner_buttons
         const checklistPopup = document.querySelector('.checklist-popup');
         const closeButton = document.querySelector('.close-popup');
