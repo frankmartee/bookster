@@ -95,6 +95,7 @@ body{
 .nav_avatar{
     width: 50px;
     object-fit: contain;
+    border-radius: 5px;
 }
 .nav{
     position: fixed;
