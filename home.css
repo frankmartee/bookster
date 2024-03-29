@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color: #111;
+}
+.row__post{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 20px;
+    transition: transform 450ms;
+}  
+.row__posts{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+}
+.row__post:hover{
+    transform: scale(1.08);
+}
+.row__posts::-webkit-scrollbar{
+    display: none;
+}
+.row_postL{
+    max-height: 250px;
+}
+.row_postL:hover{
+    transform: scale(1.10);
+}
+
+.row{
+    color: white;
+    margin-left: 20px;
+}
+.banner{
+    background: url("images/banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    object-fit: contain;
+    height: 448px;
+
+}
+.banner__content{
+    margin-left: 30px;
+    padding-top: 140px;
+    height:190px ;
+}
+.banner_title{
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 0.3rem;
+}
+.banner_des{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+.banner_button{
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right:2rem ;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+.banner_button:hover{
+    color: #111;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+.banner--fadeBottom{
+    margin-top: 145px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+}
+.nav_logo{
+    width: 200px;
+    object-fit: contain;
+}
+.nav_avatar{
+    width: 50px;
+    object-fit: contain;
+}
+.nav{
+    position: fixed;
+    top:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function:ease-in ;
+    transition: all 0.5s;
+}
+.nav_black{
+    background-color: #111;
+}
+.row_container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .track {
+    display: flex;
+    width: max-content;
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .row__post {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+  }
+  .row__post {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+  }
+  .row__post:hover {
+    transform: scale(1.08);
+  }
+  
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .row_postL {
+    max-height: 250px;
+  }
+  
+  .row_postL:hover {
+    transform: scale(1.10);
+  }
+  
+  /* Add more rows if needed */
+  .row_container2 .track {
+    transform: translateX(-200px);
+  }
+  
+  .row_container3 .track {
+    transform: translateX(-400px);
+  }
+  .checklist-popup {
+    font-family: neue-haas-unica, sans-serif;
+    background-color: #2f3942;
+    padding: 20px;
+    border: 1px solid #080911;
+    position: fixed; /* Makes it appear on top of other content */
+    top: 50%; /* Positions it vertically in the center */
+    left: 50%; /* Positions it horizontally in the center */
+    transform: translate(-50%, -50%); /* Adjusts position based on its size */
+    display: none; /* Initially hidden */
+    border-radius: 10px;
+    
+  }
+  
+  .checklist-popup.show {
+    display: block; /* Makes it visible when triggered */
+
+  }
+  
+  .close-popup {
+    background-color: #9FEF00;
+    color: #111927;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .listlist {
+    color: #A4B1CD;
+    font-family: neue-haas-unica, sans-serif;
+  }
+
+  .checklist{
+    color: #fff;
+    font-family: neue-haas-unica, sans-serif;
+  }
